@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root to: 'movies#index'
+  root to: 'welcome#index'
   devise_for :users
 
   resources :movies
